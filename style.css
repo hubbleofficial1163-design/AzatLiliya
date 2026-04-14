@@ -59,16 +59,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 100%;
-    padding-top: 70px;
-    padding-bottom: 80px;
 }
 
 /* Плеер - оптимизирован для мобильных */
 .music-player {
     position: absolute;
-    top: 10px;
+    top: 20px;
     left: 0;
     width: 100%;
     padding: 0 15px;
@@ -143,7 +141,7 @@ body {
 .couple-names {
     text-align: center;
     color: white;
-    margin-top: 30px;
+    /* margin-top удаляем или оставляем 0 */
 }
 
 .couple-names h1 {
@@ -174,16 +172,18 @@ body {
 
 /* Счетчик - оптимизирован для мобильных 90 500px*/
 .countdown-container {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 500px;
     background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2px);
     border-radius: 12px;
     padding: 20px 15px;
     text-align: center;
-    width: 100%;
-    max-width: none;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: auto;
-    margin-bottom: -20px;
 }
 
 .countdown {
@@ -535,7 +535,7 @@ body {
 }
 
 /* Точки на временной линии */
-.timeline-item::before {
+/* .timeline-item::before {
     content: '';
     position: absolute;
     left: 21px;
@@ -547,12 +547,12 @@ body {
     z-index: 2;
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1), 0 0 15px rgba(255, 255, 255, 0.2);
     transition: all 0.3s;
-}
+} */
 
-.timeline-item:hover::before {
+/* .timeline-item:hover::before {
     transform: scale(1.2);
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.3);
-}
+} */
 
 .timeline-content h3 {
     font-family: 'Cormorant Garamond', 'Georgia', serif;
